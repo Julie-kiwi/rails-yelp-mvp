@@ -1,0 +1,23 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+
+  <p>Address : <%= @restaurant.address %></p>
+  <p>Category : <%= @restaurant.category %></p>
+  <p>Phone number : <%= @restaurant.phone_number %></p>
+  <%= link_to 'Destroy', restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
+
+<div class="container">
+  <h2>Reviews</h2>
+
+  <% @reviews.each do |review| %>
+    <div class="container">
+      <div class="review">
+        <p>Review : <%= review.content %></p>
+         <p>Rate : <%= review.rating %>/5</p>
+      </div>
+    </div>
+  <% end %>
+
+  <%= link_to '+ Add a new review',  new_restaurant_review_path(@restaurant)%>
+</div>
