@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.card {
+  height: 100%;
+  width:100%;
+  border : 1px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  background-size: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+p.card-text {
+  margin-top: 10px;
+  text-align: center;
+}
